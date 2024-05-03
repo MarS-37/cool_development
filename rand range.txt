@@ -1,0 +1,17 @@
+    // selection range constant
+	const int low = -1'000;
+	const int high = 4'000;
+	
+	// fill the file with numbers		
+	for (int i = 0; i < LINE_IN_FILE; i++) {
+		fs << (low + rand() % high) << std::endl;
+	}
+	
+
+или то же самое
+
+
+	// fill the file with numbers		
+	for (int i = 0; i < LINE_IN_FILE; i++) {
+		fs << (rand() % 5001 - 1000) << std::endl;
+	}
