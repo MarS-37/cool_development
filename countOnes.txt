@@ -1,0 +1,33 @@
+#include <iostream>
+
+
+int countOnes(int number)
+{
+	int count = 0;
+
+	while (number > 0) {
+		if (number % 10 == 1) {
+			++count;
+		}
+
+		number /= 10;
+	}
+
+	return count;
+}
+
+
+int main()
+{
+	setlocale(LC_ALL, "");
+
+	int number;
+
+	std::cout << "Введите число: ";
+	std::cin >> number;
+
+	int result = countOnes(number);
+	std::cout << "Количество единиц в числе: " << result << std::endl;
+
+	return 0;
+}
